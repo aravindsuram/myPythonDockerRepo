@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_myPythonDockerRepo_1694777725562-pr-trigger-input-set
+  identifier: Build_myPythonDockerRepo_1694777725562prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: dummy
+  pipeline:
+    identifier: Build_myPythonDockerRepo_1694777725562
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
