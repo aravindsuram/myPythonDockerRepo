@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_myPythonDockerRepo_1694777725562-push-trigger-input-set
+  identifier: Build_myPythonDockerRepo_1694777725562pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: dummy
+  pipeline:
+    identifier: Build_myPythonDockerRepo_1694777725562
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
