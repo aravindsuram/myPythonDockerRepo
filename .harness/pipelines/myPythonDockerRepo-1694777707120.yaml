@@ -18,16 +18,16 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
+                  type: GitClone
+                  name: GitClone_1
+                  identifier: GitClone_1
                   spec:
-                    image: plugins/docker
-                    settings:
-                      dry_run: "true"
-                      repo: hello/world
-                      tags: latest
-                  timeout: ""
-                  type: Plugin
+                    connectorRef: account.Github_OAuth_1694777683429
+                    repoName: aravindsuram/myPythonDockerRepo
+                    build:
+                      type: branch
+                      spec:
+                        branch: master
           platform:
             arch: Amd64
             os: Linux
