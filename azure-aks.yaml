@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-python-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: my-python-app
@@ -13,9 +13,8 @@ spec:
         app: my-python-app
     spec:
       containers:
-      - name: my-python-app
-        image: myakacrregistry.azurecr.io/myakacrregistry/my-python-app
-        imagePullPolicy: Always
+      - name: mypythondockerrepo
+        image: myacrrepo421.azurecr.io/akannan1087/mypythondockerrepo:#{Build.BuildId}#
         ports:
         - containerPort: 5000
 # service type loadbalancer       
